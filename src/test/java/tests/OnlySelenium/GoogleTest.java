@@ -1,5 +1,6 @@
 package tests.OnlySelenium;
 
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,7 +9,8 @@ import java.time.Duration;
 
 public class GoogleTest {
 
-    public static void main(String[] args) {
+    @Test
+    public void firstTest() {
 
         System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();

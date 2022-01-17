@@ -27,15 +27,17 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    implementation 'net.serenity-bdd:serenity-core:3.1.13'
-    implementation 'net.serenity-bdd:serenity-junit:3.1.13'
+    implementation 'net.serenity-bdd:serenity-core:3.1.15'
+    implementation 'net.serenity-bdd:serenity-junit:3.1.15'
     implementation 'junit:junit:4.13.2'
-    implementation 'net.serenity-bdd:serenity-screenplay:3.1.13'
+    implementation 'net.serenity-bdd:serenity-screenplay:3.1.15'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }
 
 test {
+    testLogging.showStandardStreams = true
+    systemProperties System.getProperties()
     useJUnitPlatform()
 }
 
