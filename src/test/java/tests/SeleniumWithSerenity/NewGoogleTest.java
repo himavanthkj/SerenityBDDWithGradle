@@ -14,7 +14,7 @@ import java.time.temporal.ChronoUnit;
 @DefaultUrl("http://www.google.com")
 public class NewGoogleTest extends PageObject {
 
-    @Managed(driver = "chrome")
+    @Managed
     WebDriver driver;
 
     @Title("Performing Google Search!!!")
@@ -27,7 +27,7 @@ public class NewGoogleTest extends PageObject {
         setImplicitTimeout(10, ChronoUnit.SECONDS);
         $("//input[@value='Google Search']").click();
         boolean checkSearch = $("//h3[1]").getText().contains("Cucumber");
-        if(!checkSearch) {
+        if(checkSearch) {
             System.out.println("Search results match with keyword Cucumber");
         } else {
             System.out.println("Search results does not match with keyword Cucumber");

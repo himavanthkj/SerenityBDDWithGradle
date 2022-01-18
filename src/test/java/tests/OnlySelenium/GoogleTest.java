@@ -1,5 +1,6 @@
 package tests.OnlySelenium;
 
+import org.junit.Ignore;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +10,7 @@ import java.time.Duration;
 
 public class GoogleTest {
 
+    @Ignore
     @Test
     public void firstTest() {
 
