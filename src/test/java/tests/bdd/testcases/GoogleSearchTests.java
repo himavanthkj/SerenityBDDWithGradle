@@ -15,6 +15,7 @@ public class GoogleSearchTests {
 
     @Steps
     GoogleSearchPageSteps googleSearchPageSteps;
+    @Steps
     GoogleSearchResultsPageSteps googleSearchResultsPageSteps;
 
     @Managed
@@ -24,6 +25,7 @@ public class GoogleSearchTests {
     @Test
     public void basicGoogleSearch() {
         String keyword = "Cucumber";
+        googleSearchPageSteps.openGoogleSearch();
         googleSearchPageSteps.performGoogleSearchForKeyword(keyword);
         googleSearchResultsPageSteps.googleSearchResultsShouldMatch(keyword);
     }

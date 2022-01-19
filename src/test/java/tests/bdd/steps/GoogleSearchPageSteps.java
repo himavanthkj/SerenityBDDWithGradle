@@ -5,11 +5,15 @@ import tests.bdd.pages.GoogleSearchPage;
 
 public class GoogleSearchPageSteps {
 
-    static GoogleSearchPage googleSearchPage;
+    private GoogleSearchPage googleSearchPage;
+
+    @Step
+    public void openGoogleSearch() {
+        googleSearchPage.open();
+    }
 
     @Step
     public void performGoogleSearchForKeyword(String keyword) {
-        googleSearchPage.openGoogleSearchPage();
         googleSearchPage.enterKeywordInGoogleSearchBox(keyword);
         googleSearchPage.clickGoogleSearchButton();
     }

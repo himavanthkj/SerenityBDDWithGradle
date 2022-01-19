@@ -6,10 +6,11 @@ import tests.bdd.pages.GoogleSearchResultsPage;
 
 public class GoogleSearchResultsPageSteps {
 
-    static GoogleSearchResultsPage googleSearchResultsPage;
+    private GoogleSearchResultsPage googleSearchResultsPage;
 
     @Step
     public void googleSearchResultsShouldMatch(String keyword) {
-        Assert.assertTrue("The Google Search Results do not match the keyword '" + keyword + "'.", googleSearchResultsPage.verifyFirstSearchResult(keyword));
+//        Assert.assertTrue("The Google Search Results do not match the keyword '" + "Cucumber" + "'.", googleSearchResultsPage.verifyFirstSearchResult("Cucumber"));
+        Assert.assertTrue(googleSearchResultsPage.verifyFirstSearchResult(keyword));
     }
 }
