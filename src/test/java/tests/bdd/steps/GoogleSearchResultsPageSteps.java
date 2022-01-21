@@ -6,7 +6,7 @@ import tests.bdd.pages.GoogleSearchResultsPage;
 
 public class GoogleSearchResultsPageSteps {
 
-    private GoogleSearchResultsPage googleSearchResultsPage;
+    private GoogleSearchResultsPage googleSearchResultsPage = new GoogleSearchResultsPage();
 
     @Step
     public void googleSearchResultsShouldMatch(String keyword) {

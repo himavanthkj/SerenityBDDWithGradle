@@ -5,7 +5,7 @@ import tests.bdd.pages.GoogleSearchPage;
 
 public class GoogleSearchPageSteps {
 
-    private GoogleSearchPage googleSearchPage;
+    private GoogleSearchPage googleSearchPage = new GoogleSearchPage();
 
     @Step
     public void openGoogleSearch() {
